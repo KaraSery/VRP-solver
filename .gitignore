@@ -1,3 +1,5 @@
+#API Keys
+src/google_map_api_key
 # Logs
 logs
 *.log

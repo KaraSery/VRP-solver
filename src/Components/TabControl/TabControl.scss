@@ -1,0 +1,17 @@
+.tab-control {
+  position: relative;
+  display: flex;
+  .selector {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    width: 1px;
+    background-color: black;
+    transform-origin: left;
+    transition: transform 0.15s ease 0.1s;
+    transform: translateX(0) scaleX(0);
+  }
+
+}
