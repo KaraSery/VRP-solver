@@ -1,0 +1,5 @@
+fastapi[standard]
+requests
+azure-maps-route
+aiohttp
+ortools
