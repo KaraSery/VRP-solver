@@ -1,5 +1,6 @@
 import {TabsIndexContext} from "../Tabs/Tabs";
-import {Component, createRef, ReactNode, useContext, useEffect, useState} from "react";
+import type {ReactNode} from "react";
+import {createRef, useContext, useEffect} from "react";
 import './TabLabel.scss'
 
 interface TabLabelProps {
@@ -7,9 +8,7 @@ interface TabLabelProps {
     id: string;
     selected?: boolean;
 }
-const defaultProps = {
-    selected: false,
-}
+
 export function TabLabel({ children, id, selected, ...defaultProps }: TabLabelProps): ReactNode {
     const {handleChange} = useContext(TabsIndexContext);
     const label = createRef<HTMLElement>();

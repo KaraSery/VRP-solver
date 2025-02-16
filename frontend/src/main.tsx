@@ -4,6 +4,12 @@ import { Provider } from "react-redux"
 import App from "./App"
 import { store } from "./app/store"
 import "./index.css"
+import testJobs from './testJobs.json'
+import {addJob} from "./features/jobs/jobsSlice";
+
+testJobs.forEach(job => {
+    store.dispatch(addJob(job))
+})
 
 const container = document.getElementById("root")
 

@@ -1,19 +1,20 @@
-import { Loader } from "@googlemaps/js-api-loader";
-import {createContext, ReactNode, useEffect, useState} from "react";
+import type { Loader } from "@googlemaps/js-api-loader";
+import type {ReactNode} from "react";
+import {createContext, useEffect, useState} from "react";
 
 export const GoogleMapContext = createContext<boolean>(false)
 
-export function GoogleMapProvider({ children }: { children: ReactNode }) {
+export function GoogleMapProvider({ children, loader }: { children: ReactNode, loader: Loader }) {
     const [isLoaded, setIsLoaded] = useState<boolean>(false);
     useEffect(()=> {
-        const loader = new Loader({
-            apiKey: "AIzaSyBP6u8z1Wter_Uk1PEInnHBg8SV_f4Vxhk",
-            version: "weekly",
-        })
-        loader.importLibrary("maps").then(_=> {
+        loader.importLibrary("maps").then(() => {
+            console.log("Google Maps API loaded ✅");
             setIsLoaded(true);
         })
-    })
+            .catch((error) => {
+                console.error("Failed to load Google Maps API ❌", error);
+            });
+    }, [])
     return (
         <GoogleMapContext.Provider value={isLoaded}>
             {children}

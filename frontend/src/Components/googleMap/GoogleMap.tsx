@@ -1,6 +1,8 @@
 import {useContext, useEffect, useRef} from "react";
 import {GoogleMapContext} from "../GoogleMapProvider/GoogleMapProvider";
 import './google-map.scss'
+
+
 export function GoogleMap() {
     const isLoaded = useContext(GoogleMapContext);
     const mapRef = useRef<HTMLDivElement | null>(null);

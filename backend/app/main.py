@@ -1,23 +1,24 @@
 import json
-import os
-from typing import Union
-
-import requests
 from azure.core.exceptions import HttpResponseError
-from fastapi import FastAPI
-from pydantic.v1 import JsonError
-from starlette.staticfiles import StaticFiles
-import os
 from dotenv import load_dotenv
-
-import asyncio
-
-from app.utils import get_route_matrix
+from fastapi import FastAPI
+import os
+from app.utils.bing_matrix import get_route_matrix
 from app.utils.simple_tsp_solver import simple_tsp_solver, get_routes
+from fastapi.middleware.cors import CORSMiddleware
+
+load_dotenv()
+frontend_origin = [os.getenv("FRONTEND_ORIGIN")]
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=frontend_origin,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 @app.get("/ok")
 async def routes_matrix():
     cwd=os.getcwd()
@@ -30,6 +31,7 @@ async def routes_matrix():
         except HttpResponseError as e:
             return e
 
+@app.get("/solve")
 def solve_simple_tsp(distance_matrix, num_vehicles, depot):
     [solution, routing, manager] = simple_tsp_solver(distance_matrix, num_vehicles, depot)
     routes = get_routes(solution, routing, manager)

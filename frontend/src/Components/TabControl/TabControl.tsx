@@ -1,4 +1,5 @@
-import {createRef, ReactNode, useContext, useEffect} from "react";
+import type {ReactNode} from "react";
+import {createRef, useContext, useEffect} from "react";
 import {TabsIndexContext} from "../Tabs/Tabs";
 import "./TabControl.scss"
 
@@ -19,7 +20,7 @@ export function TabControl({children}: {children: ReactNode}) {
     return (
         <nav className='tab-control' ref={navRef}>
             {children}
-            <div ref={selectorRef} className={'selector'}></div>
+            <div data-testid={"selector"} ref={selectorRef} className={'selector'}></div>
         </nav>
     )
 }

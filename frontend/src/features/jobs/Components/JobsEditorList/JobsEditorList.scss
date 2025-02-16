@@ -1,0 +1,20 @@
+.jobs-editor-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  .row {
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+  .jobs-editor-list__header {
+    .header__address {
+      grid-column: span 5;
+    }
+    .header__start-time {
+      grid-column: span 3;
+    }
+    .header__start-end {
+      grid-column: span 3;
+    }
+  }
+}

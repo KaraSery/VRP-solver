@@ -1,0 +1,266 @@
+[
+  {
+    "address": "40 rue marietton, 69009 Lyon",
+    "index": 0,
+    "location": {
+      "lat": 45.7756392,
+      "lng": 4.8037335
+    },
+    "startTime": "2022-05-03T06:30:00.000Z",
+    "endTime": "2022-05-03T23:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "51 Chemin des Mouilles, 69130 Ecully",
+    "index": 1,
+    "location": {
+      "lat": 45.7815052,
+      "lng": 4.7700205
+    },
+    "startTime": "2022-05-03T11:30:00.000Z",
+    "endTime": "2022-05-03T12:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "40 Av Guy de Collongue, 69130 Ecully",
+    "index": 2,
+    "location": {
+      "lat": 45.7843284,
+      "lng": 4.7659597
+    },
+    "startTime": "2022-05-03T11:00:00.000Z",
+    "endTime": "2022-05-03T11:30:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "25 Rte de Paris, 69260 Charbonnieres-les-Bains",
+    "index": 3,
+    "location": {
+      "lat": 45.78793659999999,
+      "lng": 4.7465046
+    },
+    "startTime": "2022-05-03T11:00:00.000Z",
+    "endTime": "2022-05-03T11:30:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "18 Av du Dr Terver, 69130 Ecully",
+    "index": 4,
+    "location": {
+      "lat": 45.77264419999999,
+      "lng": 4.7777642
+    },
+    "startTime": "2022-05-03T07:00:00.000Z",
+    "endTime": "2022-05-03T07:30:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "9 Chemin. de la Pomme, 69160 Tassin-la-Demi-Lune",
+    "index": 5,
+    "location": {
+      "lat": 45.76139389999999,
+      "lng": 4.78189
+    },
+    "startTime": "2022-05-03T11:30:00.000Z",
+    "endTime": "2022-05-03T12:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "15 Av de la Constellation, 69160 Tassin-la-Demi-Lune",
+    "index": 6,
+    "location": {
+      "lat": 45.75467099999999,
+      "lng": 4.773683999999999
+    },
+    "startTime": "2022-05-03T08:30:00.000Z",
+    "endTime": "2022-05-03T09:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "68 Rue Joliot Curie, 69005 Lyon",
+    "index": 7,
+    "location": {
+      "lat": 45.754606,
+      "lng": 4.787528
+    },
+    "startTime": "2022-05-03T09:30:00.000Z",
+    "endTime": "2022-05-03T10:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "173 Av Barthelemy Buyer, 69005 Lyon",
+    "index": 8,
+    "location": {
+      "lat": 45.7631915,
+      "lng": 4.7927032
+    },
+    "startTime": "2022-05-03T11:15:00.000Z",
+    "endTime": "2022-05-03T11:45:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "50 Av Sidoine Apollinaire, 69009 Lyon",
+    "index": 9,
+    "location": {
+      "lat": 45.7708217,
+      "lng": 4.7960326
+    },
+    "startTime": "2022-05-03T11:30:00.000Z",
+    "endTime": "2022-05-03T12:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "2 Rue de la Fraternelle, 69009 Lyon",
+    "index": 10,
+    "location": {
+      "lat": 45.7695563,
+      "lng": 4.8031926
+    },
+    "startTime": "2022-05-03T08:30:00.000Z",
+    "endTime": "2022-05-03T09:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "55 Av Rene Cassin, 69009 Lyon",
+    "index": 11,
+    "location": {
+      "lat": 45.768862,
+      "lng": 4.807348999999999
+    },
+    "startTime": "2022-05-03T07:30:00.000Z",
+    "endTime": "2022-05-03T08:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "25 Rue de la Claire, 69009 Lyon",
+    "index": 12,
+    "location": {
+      "lat": 45.7795694,
+      "lng": 4.8056097
+    },
+    "startTime": "2022-05-03T07:30:00.000Z",
+    "endTime": "2022-05-03T08:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "23 Rue Emile Duport, 69009 Lyon",
+    "index": 13,
+    "location": {
+      "lat": 45.784562,
+      "lng": 4.810255199999999
+    },
+    "startTime": "2022-05-03T10:15:00.000Z",
+    "endTime": "2022-05-03T10:45:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "49 Rue des Docks, 69009 Lyon",
+    "index": 14,
+    "location": {
+      "lat": 45.7890126,
+      "lng": 4.8127957
+    },
+    "startTime": "2022-05-03T10:45:00.000Z",
+    "endTime": "2022-05-03T11:15:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "21 Rue de la Mignonne, 69009 Lyon",
+    "index": 15,
+    "location": {
+      "lat": 45.7979882,
+      "lng": 4.8274265
+    },
+    "startTime": "2022-05-03T09:00:00.000Z",
+    "endTime": "2022-05-03T09:30:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "32 Rue des Docteurs Cordier, 69009 Lyon",
+    "index": 16,
+    "location": {
+      "lat": 45.8017638,
+      "lng": 4.8300885
+    },
+    "startTime": "2022-05-03T11:45:00.000Z",
+    "endTime": "2022-05-03T12:15:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "7 Av General de Gaulle, 69370 Saint-Didier-au-Mont-d'Or",
+    "index": 17,
+    "location": {
+      "lat": 45.7991677,
+      "lng": 4.8070832
+    },
+    "startTime": "2022-05-03T11:00:00.000Z",
+    "endTime": "2022-05-03T11:30:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "27 Rue Hector Berlioz, 69009 Lyon",
+    "index": 18,
+    "location": {
+      "lat": 45.8008554,
+      "lng": 4.8262323
+    },
+    "startTime": "2022-05-03T09:30:00.000Z",
+    "endTime": "2022-05-03T10:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "112 Rte de Saint-Fortunat, 69450 Saint-Cyr-au-Mont-d'Or",
+    "index": 19,
+    "location": {
+      "lat": 45.80558720000001,
+      "lng": 4.8119948
+    },
+    "startTime": "2022-05-03T08:30:00.000Z",
+    "endTime": "2022-05-03T09:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "37 Av de Lanessan, 69410 Champagne-au-Mont-d'Or",
+    "index": 20,
+    "location": {
+      "lat": 45.7942627,
+      "lng": 4.7932505
+    },
+    "startTime": "2022-05-03T08:45:00.000Z",
+    "endTime": "2022-05-03T09:15:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "15 Av General de Gaulle, 69410 Champagne-au-Mont-d'Or",
+    "index": 21,
+    "location": {
+      "lat": 45.8026737,
+      "lng": 4.7828095
+    },
+    "startTime": "2022-05-03T11:30:00.000Z",
+    "endTime": "2022-05-03T12:00:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "22 Rte de Limonest, 69570 Dardilly",
+    "index": 22,
+    "location": {
+      "lat": 45.8237052,
+      "lng": 4.7554892
+    },
+    "startTime": "2022-05-03T11:45:00.000Z",
+    "endTime": "2022-05-03T12:15:00.000Z",
+    "duration": 300
+  },
+  {
+    "address": "44 Chemin. Jean-Marie Vianney, 69130 Ecully",
+    "index": 23,
+    "location": {
+      "lat": 45.7951522,
+      "lng": 4.7695042
+    },
+    "startTime": "2022-05-03T08:30:00.000Z",
+    "endTime": "2022-05-03T09:00:00.000Z",
+    "duration": 300
+  }
+]
