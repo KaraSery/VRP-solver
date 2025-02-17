@@ -1,8 +1,11 @@
 """Simple Travelling Salesperson Problem (TSP) between cities."""
 import sys
 
+from azure.maps.route.models import RouteMatrixResult, RouteMatrix, RouteMatrixResultResponse, RouteLegSummary
 from ortools.constraint_solver import routing_enums_pb2
 from ortools.constraint_solver import pywrapcp
+
+from app.models import Matrix, Fleet
 
 
 def create_data_model():
@@ -58,25 +61,30 @@ def get_routes(solution, routing, manager):
     routes.append(route)
   return routes
 
-def simple_tsp_solver(distance_matrix, num_vehicles, depot):
+def simple_tsp_solver(matrix_result: RouteMatrixResult, fleet: Fleet):
     """Entry point of the program."""
+
+    matrix: list[list[RouteMatrix]] = matrix_result.matrix
 
     # Create the routing index
     # manager.
     manager = pywrapcp.RoutingIndexManager(
-        len(distance_matrix), num_vehicles, depot
+        len(matrix_result.matrix), fleet.vehicles, fleet.depot
     )
 
     # Create Routing Model.
     routing = pywrapcp.RoutingModel(manager)
 
 
-    def distance_callback(from_index, to_index):
+    def distance_callback(from_index: int, to_index: int):
         """Returns the distance between the two nodes."""
         # Convert from routing variable Index to distance matrix NodeIndex.
-        from_node = manager.IndexToNode(from_index)
-        to_node = manager.IndexToNode(to_index)
-        return distance_matrix[from_node][to_node]
+        from_node: int = manager.IndexToNode(from_index)
+        to_node: int = manager.IndexToNode(to_index)
+        cell = matrix[from_node][to_node]
+        response: RouteMatrixResultResponse = cell.response
+        summary: RouteLegSummary = response.summary
+        return summary.length_in_meters
 
     transit_callback_index = routing.RegisterTransitCallback(distance_callback)
 
@@ -95,12 +103,5 @@ def simple_tsp_solver(distance_matrix, num_vehicles, depot):
     # Print solution on console.
     if solution:
         print_solution(manager, routing, solution)
-        solution = solution.value()
+
     return [solution, routing, manager]
-
-
-if __name__ == "__main__":
-    distance_matrix = sys.argv[0]
-    num_vehicle = sys.argv[0]
-    depot = sys.argv[0]
-    simple_tsp_solver(distance_matrix, num_vehicle, depot)

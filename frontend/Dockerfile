@@ -3,11 +3,11 @@ FROM node:18 AS builder
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm install
+RUN ["npm", "install"]
 
 COPY . .
 
-CMD npm run build
+RUN ["npm", "run", "build"]
 
 # Use NGINX to serve the build output
 FROM nginx:alpine

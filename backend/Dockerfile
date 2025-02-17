@@ -8,6 +8,7 @@ RUN pip install pip-tools
 RUN pip-compile /code/requirements.in
 RUN pip install -r /code/requirements.txt
 
+COPY .env /code/app/.env
 COPY ./app /code/app
 
 CMD ["fastapi", "run", "app/main.py", "--port", "8000"]

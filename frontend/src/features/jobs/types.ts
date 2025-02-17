@@ -4,7 +4,6 @@ export interface Location {
 }
 export interface Job {
     address: string
-    index: number
     location: Location
     startTime: string
     endTime: string

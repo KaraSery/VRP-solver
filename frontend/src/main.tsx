@@ -6,10 +6,15 @@ import { store } from "./app/store"
 import "./index.css"
 import testJobs from './testJobs.json'
 import {addJob} from "./features/jobs/jobsSlice";
+import {APIProvider} from "@vis.gl/react-google-maps"
 
 testJobs.forEach(job => {
     store.dispatch(addJob(job))
 })
+const API_KEY: string =
+  import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+console.log(API_KEY)
+
 
 const container = document.getElementById("root")
 
@@ -19,7 +24,9 @@ if (container) {
   root.render(
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+        <APIProvider apiKey={API_KEY}>
+          <App />
+        </APIProvider>
       </Provider>
     </React.StrictMode>,
   )
