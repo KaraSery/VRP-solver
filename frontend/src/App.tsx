@@ -13,6 +13,8 @@ import { JobsMap } from "./features/jobs/Components/JobsMap/JobsMap"
 import { useAppSelector } from "./app/hooks"
 import { selectJobs } from "./features/jobs/jobsSlice"
 import { SolverButton } from "./features/routesAPI/SolverButton/SolverButtons"
+import { DepotEditorForm } from "./features/fleet/Components/DepotEditorForm"
+import { VehicleAddForm } from "./features/fleet/Components/AddVehicleForm"
 
 
 
@@ -28,6 +30,7 @@ const App = () => {
                     <TabLabel selected={true} id="map">Map</TabLabel>
                     <TabLabel id="jobs-editor">Jobs</TabLabel>
                     <TabLabel id="jobs-add-form">Add Job</TabLabel>
+                    <TabLabel id="fleet">Fleet</TabLabel>
                     <TabLabel id="solver">Solve</TabLabel>
                 </TabControl>
                 <TabPanel labelID="map">
@@ -38,6 +41,10 @@ const App = () => {
                 </TabPanel>
                 <TabPanel labelID="jobs-add-form">
                     <JobAddForm/>
+                </TabPanel>
+                <TabPanel labelID="fleet">
+                  <DepotEditorForm />
+                  <VehicleAddForm />
                 </TabPanel>
                 <TabPanel labelID="solver">
                     <SolverButton/>

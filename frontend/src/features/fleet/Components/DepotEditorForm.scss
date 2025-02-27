@@ -1,0 +1,20 @@
+.depot-editor-form {
+
+  .depot-editor-form__buttons {
+    grid-column: span 2;
+    .confirm-cancel {
+      display: none;
+    }
+  }
+  &.editing {
+
+    .depot-editor-form__buttons {
+      .edit-delete {
+        display: none;
+      }
+      .confirm-cancel {
+        display: flex;
+      }
+    }
+  }
+}

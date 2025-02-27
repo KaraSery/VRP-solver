@@ -3,12 +3,11 @@ import { selectJobs } from "../../jobs/jobsSlice"
 import { useLazyGetMatrixQuery, useLazySolveRouteQuery } from "../routesAPISlice"
 import type { RootState } from "../../../app/store"
 import { useEffect } from "react"
+import { formatFleetForSolver, formatMatrixInput } from "../utils"
 
 export function SolverButton () {
   const jobs = useAppSelector(selectJobs);
   const fleet = useAppSelector((state: RootState) => state.fleet);
-
-  const locations = jobs.map((job) => job.location)
 
   const [getMatrix, matrixResult] = useLazyGetMatrixQuery()
   const [solveRoutes, routes] = useLazySolveRouteQuery()
@@ -18,7 +17,7 @@ export function SolverButton () {
       console.log(matrixResult.data)
       console.log('solve routes')
       solveRoutes({
-        fleet: fleet,
+        fleet: formatFleetForSolver(fleet),
         matrix_result: matrixResult.data,
       }).unwrap().then((payload=> {
         console.log(payload)
@@ -28,6 +27,7 @@ export function SolverButton () {
     }
   }, [matrixResult])
   async function handleClick() {
+    const locations = formatMatrixInput(jobs, fleet)
     await getMatrix({
       origins: locations,
       destinations: locations,
@@ -35,13 +35,23 @@ export function SolverButton () {
     console.log(matrixResult.data)
   }
   return (
-    <button
-      onClick={e => {
-        e.preventDefault()
-        handleClick()
-      }}
-    >
-      Solve
-    </button>
+    <>
+      <button
+        onClick={async e => {
+          e.preventDefault()
+          await handleClick()
+        }}
+      >
+        Solve
+      </button>
+      {routes.data && routes.data.length > 0 && (
+        <div>
+          {routes.data.map((route, i) => (
+            <>
+              {fleet.vehicles[i].name}: {route.map(stop => stop).join("-->")}</>
+          ))}
+        </div>
+      )}
+    </>
   )
 }

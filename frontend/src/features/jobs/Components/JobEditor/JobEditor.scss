@@ -1,4 +1,12 @@
 .job-editor {
+  input {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #E0E0E0;
+    padding-block: 18px;
+    padding-right: 12px;
+    text-overflow: ellipsis;
+  }
   .job-editor__address {
     grid-column: span 4;
   }

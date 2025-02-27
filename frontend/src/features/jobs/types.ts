@@ -1,7 +1,5 @@
-export interface Location {
-    lat: number
-    lng: number
-}
+import type { Location } from "../types"
+
 export interface Job {
     address: string
     location: Location

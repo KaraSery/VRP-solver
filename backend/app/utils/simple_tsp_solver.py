@@ -100,8 +100,4 @@ def simple_tsp_solver(matrix_result: RouteMatrixResult, fleet: Fleet):
     # Solve the problem.
     solution = routing.SolveWithParameters(search_parameters)
 
-    # Print solution on console.
-    if solution:
-        print_solution(manager, routing, solution)
-
     return [solution, routing, manager]

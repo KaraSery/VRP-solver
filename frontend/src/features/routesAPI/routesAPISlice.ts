@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
-import { MatrixQueryBody, RouteMatrixResult, solverQueryBody } from "./types"
+import type { MatrixQueryBody, RouteMatrixResult, solverQueryBody } from "./types"
 import type { Route } from "../routes/types"
 
 const BASE_URL = import.meta.env.VITE_ROUTE_API_BASE_URL;
@@ -18,7 +18,7 @@ export const routesAPISlice = createApi({
         body
       })
     }),
-    solveRoute: builder.query<Route[], solverQueryBody>({
+    solveRoute: builder.query<[Route[]], solverQueryBody>({
       query: (body)=> ({
         url: 'solve',
         method: 'POST',
